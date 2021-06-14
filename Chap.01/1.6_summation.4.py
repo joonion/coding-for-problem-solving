@@ -1,9 +1,9 @@
-def summation4(N, M):
-    if N == M:
-        return N
+def summation4(M, N):
+    if M == N:
+        return M
     else:
-        mid = (N + M) // 2
-        return summation4(N, mid) + summation4(mid + 1, M)
+        mid = (M + N) // 2
+        return summation4(M, mid) + summation4(mid + 1, N)
 
 N = int(input())
 print(summation4(1, N))
