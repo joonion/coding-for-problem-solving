@@ -1,5 +1,5 @@
-def summation4(N):
+def summation5(N):
     return N * (N + 1) // 2
 
 N = int(input())
-print(summation4(N))
+print(summation5(N))
