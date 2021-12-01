@@ -6,18 +6,15 @@ def leapyear(y):
 
 def invalid(year, month, day):
     num_of_days = 30 if month in [4, 6, 9, 11] else 31
-        num_of_days = 30
-    elif month == 2:
+    if month == 2:
         num_of_days = 29 if leapyear(year) else 28
     return day > num_of_days
 
 for _ in range(n):
     day += 1
     if invalid(year, month, day):
-        day = 1
-        month += 1
+        day, month = 1, month + 1
         if month > 12:
-            month = 1
-            year += 1
+            month, year = 1, year + 1
 
 print(year, month, day)

@@ -4,9 +4,8 @@ roman = "MCDXLIV"
 number = 0
 n = len(roman)
 for i in range(n):
-    current = table[roman[i]]
-    if i < n - 1 and current < table[roman[i + 1]]:
-        number -= current
+    if i < n - 1 and table[roman[i]] < table[roman[i + 1]]:
+        number -= table[roman[i]]
     else:
-        number += current
+        number += table[roman[i]]
 print(number)
